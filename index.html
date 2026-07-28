@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="YOUR_SEARCH_CONSOLE_CODE" />
+
+<title>ALANIC Technical Services</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Google Analytics / GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#081120;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+background:rgba(8,17,32,.98);
+backdrop-filter:blur(16px);
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+nav{
+display:grid;
+grid-template-columns:auto 1fr auto;
+align-items:center;
+gap:20px;
+padding:18px 8%;
+}
+
+.header-left,
+.header-actions{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.logo{
+font-size:26px;
+font-weight:900;
+letter-spacing:0.3px;
+text-transform:uppercase;
+}
+
+.logo span{
+color:#0ea5e9;
+}
+
+.nav-links{
+display:flex;
+gap:24px;
+list-style:none;
+justify-content:center;
+}
+
+.nav-links a{
+position:relative;
+text-decoration:none;
+color:#e5ecf8;
+font-weight:500;
+font-size:15px;
+transition:color .25s ease;
+}
+
+.nav-links a::after{
+content:'';
+position:absolute;
+left:0;
+bottom:-4px;
+width:0;
+height:2px;
+background:#0ea5e9;
+transition:width .25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active{
+color:#ffffff;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+width:100%;
+}
+
+.quote-btn{
+background:#0ea5e9;
+padding:12px 24px;
+border-radius:999px;
+box-shadow:0 16px 40px rgba(14,165,233,0.18);
+transition:transform .2s ease,box-shadow .2s ease;
+}
+
+.quote-btn:hover{
+transform:translateY(-1px);
+box-shadow:0 18px 48px rgba(14,165,233,0.25);
+}
+
+.phone-cta{
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.12);
+color:#fff;
+padding:12px 20px;
+border-radius:999px;
+text-decoration:none;
+transition:background .2s ease,border .2s ease,transform .2s ease;
+}
+
+.phone-cta:hover{
+background:rgba(255,255,255,0.16);
+transform:translateY(-1px);
+}
+
+
+.hero-cta{
+display:inline-flex;
+justify-content:center;
+align-items:center;
+background:#fff;
+color:#081120;
+padding:16px 28px;
+border-radius:50px;
+font-weight:700;
+text-decoration:none;
+}
+
+.section-cta{
+margin-top:40px;
+text-align:center;
+}
+
+.section-cta a{
+background:#0ea5e9;
+color:#081120;
+padding:16px 28px;
+border-radius:50px;
+font-weight:700;
+text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+
+height:100vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.65),
+rgba(0,0,0,.75)
+),
+
+url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=1920');
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:0 10%;
+
+}
+
+.hero-content{
+max-width:1000px;
+}
+
+.tag{
+display:inline-block;
+padding:12px 25px;
+border:1px solid #0ea5e9;
+border-radius:30px;
+margin-bottom:25px;
+}
+
+.hero h1{
+font-size:72px;
+line-height:1.1;
+margin-bottom:30px;
+}
+
+.hero p{
+font-size:22px;
+line-height:1.8;
+margin-bottom:40px;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+}
+
+.primary{
+background:#0ea5e9;
+padding:18px 35px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+}
+
+.secondary{
+border:1px solid white;
+padding:18px 35px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+}
+
+/* SECTIONS */
+
+section{
+padding:120px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:70px;
+}
+
+.section-title h2{
+font-size:48px;
+margin-bottom:20px;
+}
+
+/* SERVICES */
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.service-card{
+
+background:#12203a;
+
+padding:40px;
+
+border-radius:25px;
+
+transition:.3s;
+
+}
+
+.service-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.service-card img{
+
+width:100%;
+
+height:180px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+margin-bottom:20px;
+
+background:#0a1728;
+
+}
+
+.icon{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.service-card h3{
+margin-bottom:15px;
+}
+
+/* WHY US */
+
+.why-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+}
+
+.why-box{
+
+background:#12203a;
+
+padding:35px;
+
+border-radius:20px;
+
+text-align:center;
+
+}
+
+.about-grid{
+
+display:grid;
+
+grid-template-columns:1.2fr .8fr;
+
+gap:40px;
+
+max-width:1100px;
+
+margin:auto;
+
+}
+
+.about-grid h3{
+
+font-size:28px;
+
+margin-bottom:20px;
+
+}
+
+.about-grid ul{
+
+list-style:disc;
+
+padding-left:20px;
+
+margin-top:20px;
+
+}
+
+.about-grid li{
+
+margin-bottom:12px;
+
+line-height:1.8;
+
+}
+
+.testimonial-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+max-width:1100px;
+
+margin:auto;
+
+}
+
+.testimonial-card{
+
+background:#12203a;
+
+padding:35px;
+
+border-radius:25px;
+
+box-shadow:0 20px 60px rgba(0,0,0,0.25);
+
+}
+
+.testimonial-card p{
+
+line-height:1.9;
+
+margin-bottom:20px;
+
+}
+
+.testimonial-card strong{
+
+color:#0ea5e9;
+
+}
+
+/* COUNTERS */
+
+.stats{
+
+background:#0d172b;
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+padding:80px 8%;
+
+text-align:center;
+
+}
+
+.stats h2{
+
+font-size:55px;
+
+color:#0ea5e9;
+
+}
+
+/* CONTACT */
+
+.contact-container{
+
+max-width:800px;
+
+margin:auto;
+
+}
+
+form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+input,
+textarea,
+select{
+
+padding:18px;
+
+border:none;
+
+border-radius:12px;
+
+background:#0b1428;
+
+color:white;
+
+font-size:16px;
+
+}
+
+select{
+
+appearance:none;
+
+-webkit-appearance:none;
+
+-moz-appearance:none;
+
+background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23ffffff' stroke-width='2'/%3E%3C/svg%3E");
+
+background-repeat:no-repeat;
+
+background-position:right 18px center;
+
+padding-right:50px;
+
+}
+
+button{
+
+padding:18px;
+
+background:#0ea5e9;
+
+border:none;
+
+border-radius:12px;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:#040b16;
+
+padding:60px 8%;
+
+color:#cbd5e1;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:40px;
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+.footer-logo{
+
+font-size:26px;
+
+font-weight:800;
+
+color:#fff;
+
+margin-bottom:15px;
+
+}
+
+.footer-copy{
+
+margin-top:25px;
+
+font-size:14px;
+
+color:#94a3b8;
+
+}
+
+.footer-column h4{
+
+margin-bottom:20px;
+
+font-size:18px;
+
+color:#fff;
+
+}
+
+.footer-column p,
+.footer-column a{
+
+color:#cbd5e1;
+
+text-decoration:none;
+
+line-height:1.9;
+
+}
+
+.footer-column a:hover{
+
+color:#0ea5e9;
+
+}
+
+.footer-links{
+
+display:flex;
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+.footer-contact span{
+
+display:block;
+
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+
+position:fixed;
+
+right:30px;
+
+bottom:30px;
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
+background:#25D366;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:30px;
+
+text-decoration:none;
+
+z-index:1000;
+
+}
+
+/* MOBILE */
+
+.menu-toggle{
+display:none;
+font-size:30px;
+cursor:pointer;
+}
+
+@media(max-width:900px){
+
+.menu-toggle{
+display:block;
+}
+
+nav ul{
+display:none;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+flex-direction:column;
+background:rgba(8,17,32,.98);
+padding:20px 8%;
+gap:15px;
+z-index:999;
+}
+
+nav ul.active{
+display:flex;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.stats{
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.why-grid{
+grid-template-columns:1fr;
+}
+
+.filter-tabs{
+flex-wrap:wrap;
+}
+
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeInUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.fade-in{
+animation:fadeInUp 0.8s ease-out forwards;
+opacity:0;
+}
+
+.service-card{
+transition:all .4s cubic-bezier(0.23,1,0.320,1);
+box-shadow:0 10px 40px rgba(0,0,0,0.15);
+}
+
+.service-card:hover{
+transform:translateY(-12px);
+box-shadow:0 25px 60px rgba(14,165,233,0.2);
+}
+
+.why-box,
+.testimonial-card{
+transition:all .4s cubic-bezier(0.23,1,0.320,1);
+box-shadow:0 10px 40px rgba(0,0,0,0.1);
+}
+
+.why-box:hover,
+.testimonial-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 50px rgba(14,165,233,0.15);
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<nav>
+
+<div class="header-left">
+
+<div class="logo">
+
+ALANIC <span>Technical Services</span>
+
+</div>
+
+<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+</div>
+
+<ul id="navMenu" class="nav-links">
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#services">Services</a></li>
+
+<li><a href="#why">Why Us</a></li>
+
+<li><a href="#testimonials">Testimonials</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<div class="header-actions">
+<a class="phone-cta" href="tel:+971505056885">Call Now</a>
+<a class="quote-btn" href="#contact">Get Quote</a>
+</div>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="tag">
+
+Dubai, UAE
+
+</div>
+
+<h1>
+
+Building Better Spaces Across Dubai
+
+</h1>
+
+<p>
+
+Professional technical services delivering quality workmanship in HVAC, interiors, electrical, landscaping and infrastructure solutions.
+
+</p>
+
+<div class="hero-buttons">
+
+<a class="primary" href="#services">
+
+Explore Services
+
+</a>
+
+<a class="secondary" href="#contact">
+
+Get Quote
+
+</a>
+
+</div>
+
+<div class="section-cta">
+<a class="hero-cta" href="#contact">Book a Free Inspection</a>
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="section-title">
+
+<h2>About ALANIC</h2>
+
+<p>Trusted technical services for Dubai homes, offices, and commercial spaces.</p>
+
+</div>
+
+<div class="about-grid">
+
+<div>
+
+<h3>We deliver reliable technical solutions</h3>
+
+<p>From HVAC and electrical installations to interiors, landscaping, and facility maintenance, ALANIC helps clients complete projects on time, on budget, and to a high standard.</p>
+
+<ul>
+
+<li>Experienced local team with fast response</li>
+<li>Custom solutions for residential and commercial clients</li>
+<li>Quality control, safety checks, and follow-up support</li>
+</ul>
+
+</div>
+
+<div>
+
+<h3>What sets us apart</h3>
+
+<p>We combine skilled workmanship with professional project coordination so every job is handled smoothly from proposal to completion.</p>
+
+</div>
+
+</div>
+
+<div class="section-cta">
+<a href="#contact">Request a Service Quote</a>
+</div>
+
+</section>
+
+<section id="services">
+
+<div class="section-title">
+
+<h2>Our Services</h2>
+
+<p>Complete technical solutions under one roof.</p>
+
+</div>
+
+<div class="service-grid">
+
+<div class="service-card">
+
+<img src="Image/air conditioning.png" alt="Air conditioning service">
+
+<div class="icon">❄️</div>
+
+<h3>Air Conditioning</h3>
+
+<p>Installation & Maintenance</p>
+
+</div>
+
+<div class="service-card">
+
+<img src="Image/floor & tiling works.png" alt="Floor and tiling work">
+
+<div class="icon">🧱</div>
+
+<h3>Floor & Tiling Works</h3>
+
+<p>Premium flooring solutions</p>
+
+</div>
+
+<div class="service-card">
+
+<img src="Image/false ceiling.png" alt="False ceiling installation">
+
+<div class="icon">💡</div>
+
+<h3>False Ceiling</h3>
+
+<p>Ceiling and lighting installations</p>
+
+</div>
+
+<div class="service-card">
+
+<img src="Image/swimming pools.png" alt="Swimming pool service">
+
+<div class="icon">🏊</div>
+
+<h3>Swimming Pools</h3>
+
+<p>Maintenance & plaster works</p>
+
+</div>
+
+<div class="service-card">
+
+<img src="Image/carpentry & painting.png" alt="Carpentry & Painting">
+
+<div class="icon">🎨</div>
+
+<h3>Carpentry & Painting</h3>
+
+<p>Professional finishing services</p>
+
+</div>
+
+<div class="service-card">
+
+<img src="Image/Cleaning Services.png" alt="Cleaning Services">
+
+<div class="icon">🧹</div>
+
+<h3>Cleaning Services</h3>
+
+<p>Cleaning & wallpaper fixing</p>
+
+</div>
+
+<div class="service-card">
+
+<img src="Image/fabrication works.png" alt="Fabrication Works">
+
+<div class="icon">⚙️</div>
+
+<h3>Fabrication Works</h3>
+
+<p>Custom fabrication solutions</p>
+
+</div>
+
+<div class="service-card">
+
+<img src="Image/road signage.png" alt="Road Signage">
+
+<div class="icon">🚧</div>
+
+<h3>Road Signage</h3>
+
+<p>Directional boards installation</p>
+
+</div>
+
+<div class="service-card">
+
+<img src="Image/sports play areas.png" alt="Sports Play Areas">
+
+<div class="icon">🏋️</div>
+
+<h3>Sports Play Areas</h3>
+
+<p>Landscape and gym equipment fixing</p>
+
+</div>
+
+<div class="service-card">
+
+<img src="Image/electrical works.png" alt="Electrical Works">
+
+<div class="icon">⚡</div>
+
+<h3>Electrical Works</h3>
+
+<p>Residential and commercial installations</p>
+
+</div>
+
+<div class="service-card">
+
+<img src="Image/interlock.png" alt="Interlock">
+
+<div class="icon">🔒</div>
+
+<h3>Interlock</h3>
+
+<p>Interlock systems installation</p>
+
+</div>
+
+</div>
+
+<div class="section-cta">
+<a href="#contact">Speak With Our Team</a>
+</div>
+
+</section>
+
+<section id="why">
+
+<div class="section-title">
+
+<h2>Why Choose ALANIC</h2>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why-box">
+
+24/7 Support
+
+</div>
+
+<div class="why-box">
+
+Professional Team
+
+</div>
+
+<div class="why-box">
+
+Quality Workmanship
+
+</div>
+
+<div class="why-box">
+
+On-Time Delivery
+
+</div>
+
+</div>
+
+<div class="section-cta">
+<a href="#contact">Start Your Project Today</a>
+</div>
+
+</section>
+
+<section id="testimonials">
+
+<div class="section-title">
+
+<h2>Client Testimonials</h2>
+
+<p>Real feedback from customers who trust our work.</p>
+
+</div>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-card">
+
+<p>“ALANIC completed our office renovation quickly and with great attention to detail. Their team was professional from start to finish.”</p>
+
+<strong>— Sara, Dubai Business Centre</strong>
+
+</div>
+
+<div class="testimonial-card">
+
+<p>“The HVAC installation was seamless and the service team has been very responsive whenever we needed support.”</p>
+
+<strong>— Ahmed, Jumeirah Residence</strong>
+
+</div>
+
+<div class="testimonial-card">
+
+<p>“Our pool maintenance and landscaping were handled expertly. The finished result looks amazing.”</p>
+
+<strong>— Fatima, Palm Jumeirah</strong>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="stats">
+
+<div>
+
+<h2 class="counter" data-target="250">0</h2>
+
+<p>Projects</p>
+
+</div>
+
+<div>
+
+<h2 class="counter" data-target="150">0</h2>
+
+<p>Clients</p>
+
+</div>
+
+<div>
+
+<h2 class="counter" data-target="15">0</h2>
+
+<p>Services</p>
+
+</div>
+
+<div>
+
+<h2 class="counter" data-target="24">0</h2>
+
+<p>Support Hours</p>
+
+</div>
+
+</div>
+
+<section id="contact">
+
+<div class="section-title">
+
+<h2>Send an Inquiry</h2>
+
+<p>Tell us about your project and one of our experts will get back to you quickly.</p>
+
+</div>
+
+<div class="contact-container">
+
+<form id="inquiryForm">
+
+<input id="inquiry-name" name="name" type="text" placeholder="Your Name" required>
+
+<input id="inquiry-email" name="email" type="email" placeholder="Email Address" required>
+
+<input id="inquiry-phone" name="phone" type="text" placeholder="Phone Number" required>
+
+<input id="inquiry-company" name="company" type="text" placeholder="Company / Location">
+
+<select id="inquiry-service" name="service">
+<option value="">Select service interest</option>
+<option>Air Conditioning</option>
+<option>Electrical Works</option>
+<option>Floor & Tiling</option>
+<option>Landscaping</option>
+<option>General Maintenance</option>
+</select>
+
+<textarea id="inquiry-message" name="message" rows="5" placeholder="Project details and inquiry"></textarea>
+
+<button type="submit">
+
+Submit Inquiry
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-grid">
+
+<div class="footer-column">
+
+<div class="footer-logo">ALANIC Technical Services</div>
+
+<p>Delivering reliable technical services across Dubai with a skilled team, transparent communication, and a focus on quality execution.</p>
+
+</div>
+
+<div class="footer-column">
+
+<h4>Quick Links</h4>
+
+<div class="footer-links">
+
+<a href="#about">About</a>
+
+<a href="#services">Services</a>
+
+<a href="#why">Why Us</a>
+
+<a href="#testimonials">Testimonials</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+</div>
+
+<div class="footer-column footer-contact">
+
+<h4>Contact</h4>
+
+<span>Dubai, UAE</span>
+
+<span>050 5056885</span>
+
+<span>info@alanicdxb.com</span>
+
+</div>
+
+</div>
+
+<div class="footer-copy">© 2026 ALANIC Technical Services. All rights reserved.</div>
+
+</footer>
+
+<a class="whatsapp" href="https://wa.me/971505056885?text=Hello%20ALANIC%20Technical%20Services" target="_blank" rel="noopener noreferrer">
+
+💬
+
+</a>
+
+<script>
+
+const counters=document.querySelectorAll('.counter');
+
+const speed=200;
+
+counters.forEach(counter=>{
+
+const update=()=>{
+
+const target=+counter.getAttribute('data-target');
+
+const count=+counter.innerText;
+
+const increment=target/speed;
+
+if(count<target){
+
+counter.innerText=Math.ceil(count+increment);
+
+setTimeout(update,10);
+
+}else{
+
+counter.innerText=target;
+
+}
+
+}
+
+update();
+
+});
+
+// MOBILE MENU TOGGLE
+function toggleMenu(){
+const menu=document.getElementById('navMenu');
+menu.classList.toggle('active');
+}
+
+// CLOSE MENU WHEN LINK CLICKED
+document.querySelectorAll('nav a').forEach(link=>{
+link.addEventListener('click',()=>{
+document.getElementById('navMenu').classList.remove('active');
+});
+});
+
+// SCROLL ANIMATIONS
+const observerOptions={
+threshold:0.1,
+rootMargin:'0px 0px -50px 0px'
+};
+
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('fade-in');
+observer.unobserve(entry.target);
+}
+});
+},observerOptions);
+
+document.querySelectorAll('.service-card, .why-box, .testimonial-card, .section-title').forEach(el=>{
+observer.observe(el);
+});
+
+
+// INQUIRY FORM: open user's email client with composed message
+const inquiryForm = document.getElementById('inquiryForm');
+if(inquiryForm){
+	inquiryForm.addEventListener('submit', function(e){
+		e.preventDefault();
+		const name = document.getElementById('inquiry-name').value.trim();
+		const email = document.getElementById('inquiry-email').value.trim();
+		const phone = document.getElementById('inquiry-phone').value.trim();
+		const company = document.getElementById('inquiry-company').value.trim();
+		const service = document.getElementById('inquiry-service').value;
+		const message = document.getElementById('inquiry-message').value.trim();
+		const to = 'info@alanicdxb.com';
+		const subject = encodeURIComponent(`Website Inquiry from ${name || email}`);
+		const body = encodeURIComponent(
+			`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCompany: ${company}\nService: ${service}\n\nMessage:\n${message}`
+		);
+		// open default mail client with composed email
+		window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+		trackLeadSubmission(lead);
+		saveLead(lead);
+	});
+}
+
+function saveLead(lead) {
+	const stored = JSON.parse(localStorage.getItem('alanic_leads') || '[]');
+	stored.push({
+		name: lead.name,
+		email: lead.email,
+		phone: lead.phone,
+		company: lead.company,
+		service: lead.service,
+		message: lead.message,
+		submittedAt: new Date().toISOString()
+	});
+	localStorage.setItem('alanic_leads', JSON.stringify(stored));
+}
+
+function trackLeadSubmission(lead) {
+	if(typeof gtag === 'function') {
+		gtag('event', 'lead_submission', {
+			it: 'ALANIC_lead',
+			name: lead.name,
+			email: lead.email,
+			phone: lead.phone,
+			service: lead.service,
+		});
+	}
+	if(window.dataLayer) {
+		window.dataLayer.push({
+			event: 'lead_submission',
+			leadName: lead.name,
+			leadEmail: lead.email,
+			leadService: lead.service,
+		});
+	}
+}
+</script>
+
+</body>
+
+</html>
